@@ -1,0 +1,163 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  margin: 0;
+  height: 5000px;
+  background-color: rgba(255, 255, 255, 1);
+}
+.header{
+
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 1);
+  height: 42px;
+  text-align: center;
+  font-family: monospace;
+  z-index: 1;
+}
+.header ul{
+  margin: 0px;
+  padding: 0px;
+}
+.header li{
+  float: left;
+  list-style-type: none;
+  margin-top: 0px;
+  padding: 0px;
+}
+.header a{
+  float: left;
+  padding: 10px;
+  margin: 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+.header a:hover{
+  color: grey;
+  -o-transition:.3s;
+  -ms-transition:.3s;
+  -moz-transition:.3s;
+  -webkit-transition:.3s;
+  transition:.3s;
+}
+.header-button{
+  display: none;
+}
+#selected{
+  color: grey;
+}
+.bildSpel{
+  width: 500px;
+  height: auto;
+}
+.test{
+  position: fixed;
+  width: 100%;
+  height: 400px;
+}
+.wrapper{
+  width: 80%;
+  height: 2000px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
+  top: 51px;
+  position: absolute;
+  left: 10%
+}
+.content{
+  float: left;
+  width: 50%;
+  padding: 20px;
+  height: auto;
+  z-index: 2;
+}
+.content img{
+  width: 200px;
+  height: auto;
+  margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+ 
+/*HÄRIFRÅN BÖRJAR MIN INDIVIDUELLA KOD FÖR MIN SIDA
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 50px;
+}
+
+/* Floating column for labels: 25% width */
+.kolumn1 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.kolumn2 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .kolumn1, .kolumn2, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+h1 {
+font-family: monospace;
+font-style: oblique;
+
+}
