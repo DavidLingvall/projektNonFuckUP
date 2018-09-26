@@ -90,7 +90,7 @@ img {
     margin-right: auto;
     width: 50%;
     }
- 
+
 /*HÄRIFRÅN BÖRJAR MIN INDIVIDUELLA KOD FÖR MIN SIDA
 
 /* Style inputs, select elements and textareas */
@@ -159,5 +159,12 @@ input[type=submit] {
 h1 {
 font-family: monospace;
 font-style: oblique;
+
+}
+
+#ani2{
+padding: 80px;
+display: none;
+background-color: black;
 
 }
