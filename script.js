@@ -19,7 +19,7 @@ function bytBild(){
 }
 function timer(){
   setInterval(test, 4000);
-} 
+}
 function test(){
   $('#bildSpel').fadeOut(2000, function(){
     if (i < images.length) {
@@ -35,3 +35,11 @@ function test(){
     }
   });
 }
+
+$(document).ready(function(){
+
+  $("#ani").click(function(){
+
+    $("#ani2").slideToggle();
+  });
+});
