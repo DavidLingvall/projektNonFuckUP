@@ -1,10 +1,4 @@
 var images = new Array();
-<<<<<<< HEAD
-images[0] = "bild1.jpg";
-images[1] = "bild2.jpg";
-images[2] = "bild3.jpg";
-var i = 0;
-=======
 images[0] = "pic1.jpg";
 images[1] = "pic2.jpg";
 images[2] = "pic3.jpg";
@@ -29,7 +23,6 @@ function bytBild(){
     i++;
   }
 }
->>>>>>> b0d831f6c04fa3063c60c2bf4c9b60f0393fb63c
 function timer(){
   setInterval(test, 4000);
 }
@@ -49,9 +42,17 @@ function test(){
   });
 }
 
-  var theData = [];
-  fetch('https://api.github.com/users/chriscoyier/repos')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-    });
+var theData = [];
+ fetch('https://api.github.com/users/chriscoyier/repos')
+   .then(response => response.json())
+   .then(data => {
+     console.log(data)
+   });
+
+$(document).ready(function(){
+
+  $("#ani").click(function(){
+
+    $("#ani2").slideToggle();
+  });
+});
