@@ -31,22 +31,23 @@ function test(){
 
 var items = [];
 
-  /*fetch('https://api.github.com/search/repositories?q=javascript%20is%3Atrending&sort=stars&order=desc')
+  //fetch('https://api.github.com/search/repositories?q=javascript%20is%3Atrending&sort=stars&order=desc')
 
   fetch('http://json-example.herokuapp.com/')
    .then(response => response.json())
    .then(data => {
      items = data;
-   });*/
+   });
 
 
 $('#btn').click(function(){
-  $.getJSON(
+/*
+  $.getJSOn(
     'http://json-example.herokuapp.com/',
     function(data){
       items = data;
     }
-  );
+  );*/
    console.log(items)
    $('.book-row').remove();
    $.each(items, function(ind, item) {
