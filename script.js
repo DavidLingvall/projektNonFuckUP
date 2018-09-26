@@ -29,14 +29,39 @@ function test(){
   });
 }
 
-var theData = [];
- fetch('https://api.github.com/search/repositories?q=javascript%20is%3Atrending&sort=stars&order=desc')
+var items = [];
+
+  /*fetch('https://api.github.com/search/repositories?q=javascript%20is%3Atrending&sort=stars&order=desc')
+
+  fetch('http://json-example.herokuapp.com/')
    .then(response => response.json())
    .then(data => {
-     console.log(data)
+     items = data;
+   });*/
+
+
+$('#btn').click(function(){
+  $.getJSON(
+    'http://json-example.herokuapp.com/',
+    function(data){
+      items = data;
+    }
+  );
+   console.log(items)
+   $('.book-row').remove();
+   $.each(items, function(ind, item) {
+     var tableRow = $(
+       `<tr class="book-row" >
+         <td>${item.id}</td>
+         <td>${item.name}</td>
+       </tr>`
+     );
+     $('#listOfBooks').append(tableRow);
    });
 
-  $("#ani").click(function(){
+});
 
+
+  $("#ani").click(function(){
     $("#ani2").slideToggle();
   });
