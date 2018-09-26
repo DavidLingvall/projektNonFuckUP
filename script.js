@@ -43,9 +43,8 @@ function test(){
         }
         var tableRow = $(
   				`<tr>
-  					<td>${item.id}</td>
   					<td>${item.name}</td>
-  					<td>${item.language}</td>
+            <td>${item.owner.login}</td>
   					<td>${item.watchers}</td>
   				</tr>`
   			);
