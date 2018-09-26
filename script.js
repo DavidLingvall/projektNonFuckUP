@@ -49,10 +49,9 @@ var theData = [];
      console.log(data)
    });
 
-$(document).ready(function(){
+
 
   $("#ani").click(function(){
 
     $("#ani2").slideToggle();
   });
-});
