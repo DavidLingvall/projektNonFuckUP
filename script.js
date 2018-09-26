@@ -36,17 +36,19 @@ function test(){
 
   	function listItems() {
 
-      var i = 0;
+      var i = 1;
   		items.forEach((item) => {
-        if(i === 5){
+        if(i === 6){
           return;
         }
         var tableRow = $(
   				`<tr>
-  					<td>${item.name}</td>
-            <td>${item.owner.login}</td>
+            <td>${i}</td>
+  					<td><a href="${item.html_url}">${item.name}</a></td>
+            <td><a href="${item.html_url}">${item.owner.login}</a></td>
   					<td>${item.watchers}</td>
   				</tr>`
+
   			);
         i++;
   			$('#itemList').append(tableRow);
