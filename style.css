@@ -187,13 +187,69 @@ color: white;
 
 }
 
-.skills {
-box-sizing: border-box;
-  width: 100%;
-  background-color: #fff;
+
+
+.con {
+  width: 50%;
+  background-color: #ddd;
+  color: #333;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0,0,0,.5);
+  border-radius: 8px;
+
+
 }
 
-.skillsen p{
+.box p{
+  font-family: sans-serif;
+  style: bold;
 
-  color: orange;
 }
+
+
+
+.skills{
+  text-align: right;
+  padding: 10px;
+  color: white;
+  font-family: sans-serif;
+
+}
+
+
+
+.html {
+  width: 20%;
+  background-color: black;
+  border-radius: 5px;
+  animation: html 2s;
+   }
+
+.css {
+  width: 20%;
+  background-color: black;
+  border-radius: 5px;
+  animation: css 2s;
+   }
+
+.jquery {
+  width: 20%;
+  background-color: black;
+  border-radius: 5px;
+  animation: jquery 2s;
+}
+
+.netbeans{
+  width: 20%;
+  background-color: black;
+  border-radius: 5px;
+  animation: netbeans 2s;
+ }
+ @@keyframes html {
+
+    { width: 0%;
+   }
+   100%{
+     width: 20%;
+   }
+ }
