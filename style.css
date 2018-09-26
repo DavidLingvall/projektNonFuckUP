@@ -157,13 +157,18 @@ input[type=submit] {
 }
 
 h1 {
-font-family: monospace;
-font-style: oblique;
+
 margin: 0;
 padding: 0;
 color: #fff;
 text-transform: uppercase;
 letter-spacing: 2px;
+
+}
+
+h2{
+  font-family: monospace;
+  font-style: oblique;
 
 }
 
