@@ -166,6 +166,25 @@ letter-spacing: 2px;
 
 }
 
+.rubrik h1{
+font-family: sans-serif;
+color: black;
+
+
+}
+
+.btn{
+
+cursor: wait;
+
+}
+
+
+.btn:hover {
+  opacity: 1
+
+}
+
 h2{
   font-family: monospace;
   font-style: oblique;
@@ -175,7 +194,7 @@ h2{
 #ani2{
 padding: 80px;
 display: none;
-background-color: black;
+background-image: url(pic3.jpg);
 color: white;
 
 }
@@ -219,7 +238,7 @@ color: white;
 
 
 .html {
-  width: 20%;
+  width: 30%;
   background-color: black;
   border-radius: 5px;
   animation: html 2s;
@@ -233,23 +252,50 @@ color: white;
    }
 
 .jquery {
-  width: 20%;
+  width: 10%;
   background-color: black;
   border-radius: 5px;
   animation: jquery 2s;
 }
 
 .netbeans{
-  width: 20%;
+  width: 40%;
   background-color: black;
   border-radius: 5px;
   animation: netbeans 2s;
  }
- @@keyframes html {
+ @keyframes html {
+   0%
+    { width: 0%;
+   }
+   100%{
+     width: 30%;
+   }
+ }
 
+ @keyframes css {
+   0%
     { width: 0%;
    }
    100%{
      width: 20%;
+   }
+ }
+
+ @keyframes jquery {
+   0%
+    { width: 0%;
+   }
+   100%{
+     width: 10%;
+   }
+ }
+
+ @keyframes netbeans {
+   0%
+    { width: 0%;
+   }
+   100%{
+     width: 40%;
    }
  }
