@@ -29,40 +29,48 @@ function test(){
   });
 }
 
-var items = [];
+  //'https://api.github.com/search/repositories?q=javascript%20is%3Atrending&sort=stars&order=desc'
+  $(document).ready(() => {
+  	var items = [],
+  		object = {};
 
-  //fetch('https://api.github.com/search/repositories?q=javascript%20is%3Atrending&sort=stars&order=desc')
+  	function listItems() {
 
-  fetch('http://json-example.herokuapp.com/')
-   .then(response => response.json())
-   .then(data => {
-     items = data;
-   });
+      var i = 0;
+  		items.forEach((item) => {
+        if(i === 5){
+          return;
+        }
+        var tableRow = $(
+  				`<tr>
+  					<td>${item.id}</td>
+  					<td>${item.name}</td>
+  					<td>${item.language}</td>
+  					<td>${item.watchers}</td>
+  				</tr>`
+  			);
+        i++;
+  			$('#itemList').append(tableRow);
+  		});
+  	}
 
-
-$('#btn').click(function(){
-/*
-  $.getJSOn(
-    'http://json-example.herokuapp.com/',
-    function(data){
-      items = data;
-    }
-  );*/
-   console.log(items)
-   $('.book-row').remove();
-   $.each(items, function(ind, item) {
-     var tableRow = $(
-       `<tr class="book-row" >
-         <td>${item.id}</td>
-         <td>${item.name}</td>
-       </tr>`
-     );
-     $('#listOfBooks').append(tableRow);
-   });
-
-});
-
-
+  	function loadJSON() {
+  		$.getJSON(
+        //'https://api.github.com/search/repositories?q=javascript%20is%3Atrending&sort=stars&order=desc',
+        'https://api.github.com/search/repositories?q=language:javascript&sort=watchers&order=desc',
+        (data) => {
+  				console.log(data);
+  				items = data.items.map((item) => {
+  					return {
+  						...item,
+  					};
+  				});
+  				listItems();
+  			}
+  		);
+  	}
+  	loadJSON();
+  });
   $("#ani").click(function(){
     $("#ani2").slideToggle();
   });
