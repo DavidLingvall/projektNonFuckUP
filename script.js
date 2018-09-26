@@ -27,9 +27,26 @@ function test(){
     }
   });
 }
+<<<<<<< HEAD
 var theData = [];
 fetch('https://api.github.com/users/chriscoyier/repos')
   .then(response => response.json())
   .then(data => {
     console.log(data)
+=======
+
+var theData = [];
+ fetch('https://api.github.com/users/chriscoyier/repos')
+   .then(response => response.json())
+   .then(data => {
+     console.log(data)
+   });
+
+$(document).ready(function(){
+
+  $("#ani").click(function(){
+
+    $("#ani2").slideToggle();
+  });
+>>>>>>> 2c044962e8642aa5ffe5348d396bc71c9bab36e3
 });
