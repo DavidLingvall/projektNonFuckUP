@@ -1,7 +1,13 @@
 var images = new Array();
-images[0] = "bild1.jpg";
-images[1] = "bild2.jpg";
-images[2] = "bild3.jpg";
+images[0] = "pic1.jpg";
+images[1] = "pic2.jpg";
+images[2] = "pic3.jpg";
+images[3] = "pic4.jpg";
+images[4] = "pic5.jpg";
+images[5] = "pic6.jpg";
+images[6] = "pic7.jpg";
+images[7] = "pic8.jpg";
+images[8] = "pic9.jpg";
 var i = 1;
 
 function bytBild(){
