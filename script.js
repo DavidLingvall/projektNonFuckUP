@@ -30,7 +30,7 @@ function test(){
 }
 
 var theData = [];
- fetch('https://api.github.com/users/chriscoyier/repos')
+ fetch('https://api.github.com/search/repositories?q=javascript%20is%3Atrending&sort=stars&order=desc')
    .then(response => response.json())
    .then(data => {
      console.log(data)
