@@ -8,6 +8,7 @@ images[5] = "pic6.jpg";
 images[6] = "pic7.jpg";
 images[7] = "pic8.jpg";
 images[8] = "pic9.jpg";
+
 var i = 1;
 function timer(){
   setInterval(test, 4000);
