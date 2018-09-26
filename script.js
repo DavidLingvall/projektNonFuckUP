@@ -2,7 +2,7 @@ var images = new Array();
 images[0] = "bild1.jpg";
 images[1] = "bild2.jpg";
 images[2] = "bild3.jpg";
-var i = 0;
+var i = 1;
 
 function bytBild(){
   if (i < images.length) {
