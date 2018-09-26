@@ -21,3 +21,17 @@ function test(){
     }
   });
 }
+$(document).ready(function(){
+  var theData = [];
+  fetch('https://api.github.com/users/chriscoyier/repos')
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+    });
+
+
+
+
+
+
+});
