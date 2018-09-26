@@ -9,20 +9,6 @@ images[6] = "pic7.jpg";
 images[7] = "pic8.jpg";
 images[8] = "pic9.jpg";
 var i = 1;
-
-function bytBild(){
-  if (i < images.length) {
-    $('#bildSpel').attr('src', images[i]);
-    $('#bildSpel').fadeIn(2000);
-    i++;
-  }
-  else if (i == images.length) {
-    i=0;
-    $('#bildSpel').attr('src', images[i]);
-    $('#bildSpel').fadeIn(2000);
-    i++;
-  }
-}
 function timer(){
   setInterval(test, 4000);
 }
@@ -41,10 +27,9 @@ function test(){
     }
   });
 }
-
-  var theData = [];
-  fetch('https://api.github.com/users/chriscoyier/repos')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-    });
+var theData = [];
+fetch('https://api.github.com/users/chriscoyier/repos')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+});
