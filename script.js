@@ -43,7 +43,6 @@ function test(){
         }
         var tableRow = $(
   				`<tr>
-            <td>${i}</td>
   					<td><a href="${item.html_url}">${item.name}</a></td>
             <td><a href="${item.html_url}">${item.owner.login}</a></td>
   					<td>${item.watchers}</td>

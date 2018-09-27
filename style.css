@@ -1,10 +1,12 @@
 *{
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 body{
   width: 100%;
   margin: 0;
-  height: 5000px;
+  height: auto;
   background-color: rgba(255, 255, 255, 1);
 }
 .header{
@@ -60,7 +62,6 @@ body{
 }
 .wrapper{
   width: 90%;
-  height: 2000px;
   margin: 0 auto;
   top: 51px;
   position: absolute;
@@ -88,7 +89,7 @@ body{
 .tableList{
   width: 80%;
   height: 80%;
-  margin: 5%;
+  margin: 10%;
   border-collapse: collapse;
   font-family: monospace;
   font-stretch: condensed;
@@ -110,7 +111,14 @@ body{
   text-decoration: none;
   color: inherit;
 }
-
+.tableTitle{
+  border-bottom: solid;
+}
+iframe{
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+}
 img {
     max-width: 100%;
     height: auto;
