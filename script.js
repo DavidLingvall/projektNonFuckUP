@@ -81,3 +81,33 @@ function setList() {
   $("#ani").click(function(){
     $("#ani2").slideToggle();
   });
+
+  function validate(){
+
+    var surname = document.forms["form"]["firstname"].value;
+    var lastname = document.forms["form"]["lastname"].value;
+    var min=surname.length;
+    var minLast=lastname.length;
+    if(surname =="" ){
+
+      alert("Fyll i ditt förnamn!");
+      return false;
+    }
+
+
+    if (min < 3) {
+      alert("Fyll i minst 3 bokstäver i fältet förnamn!")
+      return false;
+    }
+
+    if (minLast < 3) {
+      alert("Fyll i minst 3 bokstäver i fältet efternamn!")
+      return false;
+    }
+
+    else if (lastname=="") {
+      alert("Fyll i ditt efternamn!");
+      return false;
+    }
+
+  }

@@ -21,7 +21,7 @@
     </div>
 
     <div class="container">
-    <form action="submit.html">
+    <form name="form" action="submit.html" onSubmit="return validate()">
       <div class="row">
         <div class="kolumn1">
           <label for="fname">Förnamn</label>
@@ -43,7 +43,7 @@
           <label for="epost">E-post</label>
         </div>
         <div class="kolumn2">
-          <input type="text" id="epost" name="E-post" placeholder="E-post">
+          <input type="email" id="epost" name="E-post" placeholder="E-post">
         </div>
       </div>
       <div class="row">
@@ -51,15 +51,15 @@
           <label for="Telefon">Telefon</label>
         </div>
         <div class="kolumn2">
-          <input type="text" id="telefon" name="Telefonnummer" placeholder="Telefonnummer">
+          <input type="tel" id="telefon" name="Telefonnummer" placeholder="Telefonnummer">
         </div>
       </div>
       <div class="row">
         <div class="kolumn1">
-          <label for="Ämne">Ämne</label>
+          <label for="Inlagg">Inlägg</label>
         </div>
         <div class="kolumn2">
-          <textarea id="ämne" name="ämne" placeholder="Skriv något.." style="height:200px"></textarea>
+          <textarea id="inlägg" name="inlägg" placeholder="Skriv något.." style="height:200px"></textarea>
         </div>
       </div>
       <div class="row">
