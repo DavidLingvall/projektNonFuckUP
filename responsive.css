@@ -1,9 +1,9 @@
 @media screen and (max-width : 1100px) {
   .content{
     float: left;
-    width: 100%;
+    width: 95%;
     padding: 20px;
-    height: 600px;
+    height: 550px;
     z-index: 2;
     border: outset;
     margin: 2.5%;
@@ -22,12 +22,12 @@
     .content{
       width: 100%;
       padding: 20px;
-      height: 600;
+      height: 800px;
     }
     .tableList{
       width: 80%;
       height: 80%;
-      margin: 10%;
+      margin: 7.5%;
       border-collapse: collapse;
       font-family: monospace;
       font-stretch: condensed;
@@ -97,5 +97,16 @@
     }
 }
 @media screen and (max-width : 380px) {
+  .tableList th{
+    background-color: rgb(0,0,0);
+    text-align: center;
+    color: white;
+    font-size: 15px;
+  }
+  .tableList tr{
+    background-color: rgb(234, 234, 225);
+    text-align: center;
+    font-size: 11px;
+  }
 
 }
