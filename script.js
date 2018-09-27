@@ -76,13 +76,8 @@ function setList() {
   		);
   	}
   	loadJSON();
-<<<<<<< HEAD
-  });
 
-
-=======
-  };
->>>>>>> 3c857bf36b49a49e7216049c7727a481b61245d3
+};
   $("#ani").click(function(){
     $("#ani2").slideToggle();
   });
