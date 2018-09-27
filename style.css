@@ -48,6 +48,9 @@ body{
 .header-button{
   display: none;
 }
+.header-img{
+  display: none;
+}
 #selected{
   color: grey;
 }

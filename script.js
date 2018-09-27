@@ -11,9 +11,13 @@ images[8] = "pic9.jpg";
 
 var i = 1;
 function timer(){
-  setInterval(test, 4000);
+  var timer = setInterval(bildSpel, 4000);
 }
-function test(){
+$('#bildSpel').hover(function(){
+  clearTimeout(timer);
+});
+
+function bildSpel(){
   $('#bildSpel').fadeOut(2000, function(){
     if (i < images.length) {
       $('#bildSpel').attr('src', images[i]);
@@ -30,7 +34,7 @@ function test(){
 }
 
   //'https://api.github.com/search/repositories?q=javascript%20is%3Atrending&sort=stars&order=desc'
-  $(document).ready(() => {
+function setList() {
   	var items = [],
   		object = {};
 
@@ -70,7 +74,7 @@ function test(){
   		);
   	}
   	loadJSON();
-  });
+  };
   $("#ani").click(function(){
     $("#ani2").slideToggle();
   });
