@@ -29,6 +29,8 @@ function test(){
   });
 }
 
+
+
   //'https://api.github.com/search/repositories?q=javascript%20is%3Atrending&sort=stars&order=desc'
   $(document).ready(() => {
   	var items = [],
@@ -72,7 +74,7 @@ function test(){
   	loadJSON();
   });
 
-  
+
   $("#ani").click(function(){
     $("#ani2").slideToggle();
   });
