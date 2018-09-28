@@ -10,11 +10,15 @@ images[7] = "pic8.jpg";
 images[8] = "pic9.jpg";
 
 var i = 1;
-function timer(){
-  var timer = setInterval(bildSpel, 4000);
-}
-$('#bildSpel').hover(function(){
-  clearTimeout(timer);
+//function timer(){}
+  var x;
+  var y;
+$('#bildSpel').mouseover(function(){
+ x = setInterval(bildSpel, 4000);
+});
+
+$('#bildSpel').mouseout(function(){
+  clearInterval(x);
 });
 
 function bildSpel(){

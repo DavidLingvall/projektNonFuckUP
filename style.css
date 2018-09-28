@@ -253,6 +253,7 @@ color: black;
 .btn{
 
 cursor: grab;
+text-align: center;
 
 }
 
@@ -260,7 +261,24 @@ h2{
   font-family: monospace;
   font-style: oblique;
 
+}
 
+.submit{
+
+  text-align: center;
+}
+
+.rubrik{
+
+  text-align: center;
+}
+.vanligText{
+
+  text-align: center;
+}
+
+#ani{
+text-align: center;
 
 }
 
@@ -269,6 +287,8 @@ padding: 80px;
 display: none;
 background-image: url(pic3.jpg);
 color: white;
+text-align: center;
+
 
 }
 
@@ -295,7 +315,7 @@ color: white;
 
 .box p{
   font-family: sans-serif;
-  style: bold;
+
 
 }
 
