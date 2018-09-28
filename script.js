@@ -81,33 +81,71 @@ function setList() {
   $("#ani").click(function(){
     $("#ani2").slideToggle();
   });
+function validate(){
+  validateSurname();
+  //validateLastname();
+  //validateEmail();
+  //validatePhonenumber();
+}
 
-  function validate(){
-
-    var surname = document.forms["form"]["firstname"].value;
-    var lastname = document.forms["form"]["lastname"].value;
-    var min=surname.length;
-    var minLast=lastname.length;
-    if(surname =="" ){
-
-      alert("Fyll i ditt förnamn!");
-      return false;
-    }
-
-
-    if (min < 3) {
-      alert("Fyll i minst 3 bokstäver i fältet förnamn!")
-      return false;
-    }
-
-    if (minLast < 3) {
-      alert("Fyll i minst 3 bokstäver i fältet efternamn!")
-      return false;
-    }
-
-    else if (lastname=="") {
-      alert("Fyll i ditt efternamn!");
-      return false;
-    }
-
+function validateSurname(){
+  var surname = document.forms["form"]["firstname"].value;
+  var minSur = surname.length;
+  if(surname == ""){
+    alert("Fyll i ditt förnamn!");
+    return false;
   }
+  else if (minSur < 3) {
+    alert("Fyll i minst 3 bokstäver i fältet förnamn!")
+    return false;
+  }
+}
+function validateLastname(){
+  var lastname = document.forms["form"]["lastname"].value;
+  var minLast=lastname.length;
+  if (lastname=="") {
+    alert("Fyll i ditt efternamn!");
+    return false;
+  }
+  else if (minLast < 3) {
+    alert("Fyll i minst 3 bokstäver i fältet efternamn!")
+    return false;
+  }
+}
+function validateEmail(){
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var mailFalse = true;
+    var email = document.forms["form"]["E-post"].value;
+    if (email == "") {
+      alert("Fyll i ditt E-post!");
+      return false;
+    }
+    else if (email.match(mailformat)){
+      mailFalse = false;
+    }
+    else if (mailFalse) {
+      alert("Ogiltigt format på mail!");
+      return false;
+    }
+}
+function validatePhonenumber(){
+    var phoneFormat = /^[0-9+]+$/;
+    var phoneFalse = true;
+    var phonenumber = document.forms["form"]["phonenumber"].value;
+    var minNumber = phonenumber.length;
+    if (phonenumber == "") {
+      alert("Fyll i ditt telefonnummer!");
+      return false;
+    }
+    else if (phonenumber.match(phoneFormat)) {
+      phoneFalse = false;
+    }
+    else if (phoneFalse){
+      alert("Ogiltigt format på telefonnummer!")
+      return false;
+    }
+    if (minNumber < 4) {
+      alert("Fyll i minst 4 nummer i fältet telefon!")
+      return false;
+    }
+}
