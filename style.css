@@ -73,6 +73,7 @@ body{
   top: 51px;
   position: absolute;
   margin-left: 5%;
+  
 
 }
 .content{
@@ -92,6 +93,17 @@ body{
   margin: 0;
   border-radius: 4px;
 }
+#portfolio{
+width: 100%;
+height: auto;
+
+}
+#portfolio2{
+width: 100%;
+height: auto;
+
+}
+
 .content p {
   padding: 5px;
 }
