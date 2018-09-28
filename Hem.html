@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css" media="screen and (max-width: 900px)">
   </head>
-  <body onload="timer()">
+
     <div class="header">
       <div class="dropdownMenu">
-        <img src="mcdonalds.png" class="header-img">
+        <img src="mcdonalds.png" class="header-img" alt="logo">
         <ul class="dropdown">
           <li><a id="selected" href="Hem.html">Hem</a></li>
           <li><a href="kontaktsida.html">Kontaktsida</a></li>
@@ -24,14 +24,15 @@
       <img id="bildSpel" class="bildSpel" src="pic1.jpg" alt="Naturbilder" >
     </div>
 
-    <center><div id="ani">
+    <div id="ani">
       <button class="btn">Klicka för hemlig information!</button>
-    </div></center>
+    </div>
     <div id="ani2">
-      <center><h3>Här står det hemlig information!</h3></center>
+      <h3>För musen över bilden i 4 sek för att starta bildspelet! <br>För musen bort från bilden för att pausa!</h3>
 
     </div>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="script.js"></script>
   </body>
-  <script src="https://code.jquery.com/jquery-latest.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+
 </html>
