@@ -8,6 +8,8 @@ body{
   margin: 0;
   height: auto;
   background-color: rgba(255, 255, 255, 1);
+  background-image: url(marmoria.jpeg);
+
 }
 .header{
   position: sticky;
@@ -86,6 +88,19 @@ body{
   border: outset;
   margin: 2.5%;
   font-weight: bold;
+}
+
+.contentB{
+  border-radius: 1%;
+  float: left;
+  padding: 20px;
+  width:45%;
+  height:800px;
+  z-index: 2;
+  border: outset;
+  margin: 2.5%;
+  font-weight: bold;
+
 }
 .content img{
   width: 200px;
@@ -282,6 +297,12 @@ text-align: center;
 h2{
   font-family: monospace;
   font-style: oblique;
+}
+
+.johans{
+
+  text-align: left;
+
 }
 
 .submit{
