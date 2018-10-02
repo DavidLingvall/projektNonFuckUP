@@ -38,28 +38,45 @@ function bildSpel(){
 }
 
 function setList() {
+
   	var items = [],
   		object = {};
+
+    var contributors = []
+      object = {};
+
   	function listItems() {
       var i = 1;
   		items.forEach((item) => {
         if(i === 6){
           return;
         }
-        var tableRow = $(
+        var contributor;
+        var contNamn;
+        var contAvatar;
+        fetch(item.contributors_url)
+                .then(response => response.json())
+                .then(data => {
+            for(var i = 0; i < 5; i++){
+
+            }
+            contributor = data[0];
+            contNamn = contributor.login;
+            contAvatar = contributor.avatar_url;
+        });
+          var tableRow = $(
+
   				`<tr>
-  					<td><a href="${item.html_url}">${item.name}</a><br><button class="showMore" onclick="showMore(${i})">visa mer</button></td>
+  					<td><a href="${item.html_url}">${item.name}</a></td>
             <td><a href="${item.html_url}">${item.owner.login}</a></td>
   					<td>${item.watchers}</td>
   				</tr>
-          <tr id="showMore${i}">
-          <td>${item.contributors_url.id}</td>
-            <li></li>
-          </tr>
           `
   			);
         i++;
+
   			$('#itemList').append(tableRow);
+
   		});
   	}
 
@@ -67,18 +84,15 @@ function setList() {
   		$.getJSON(
         'https://api.github.com/search/repositories?q=language:javascript&sort=watchers&order=desc',
         (data) => {
-  				console.log(data);
+  				//console.log(data);
   				items = data.items.map((item) => {
   					return {
   						...item,
   					};
   				});
-  			//	listItems();
+  				listItems();
   			}
   		);
-      $.getJSON(
-        'item.'
-      );
   	}
   	loadJSON();
 
@@ -202,7 +216,4 @@ function init(){
     $("#phone").val(personArray[i].phonenumber);
     $("#post").val(personArray[i].post);
   }
-}
-function showMore(i){
-  $('#showMore' + i).slideToggle();
 }
