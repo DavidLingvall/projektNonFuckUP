@@ -37,9 +37,6 @@ function bildSpel(){
   });
 }
 
-
-
-  //'https://api.github.com/search/repositories?q=javascript%20is%3Atrending&sort=stars&order=desc'
 function setList() {
   	var items = [],
   		object = {};
@@ -66,7 +63,6 @@ function setList() {
 
   	function loadJSON() {
   		$.getJSON(
-        //'https://api.github.com/search/repositories?q=javascript%20is%3Atrending&sort=stars&order=desc',
         'https://api.github.com/search/repositories?q=language:javascript&sort=watchers&order=desc',
         (data) => {
   				console.log(data);
@@ -98,6 +94,7 @@ function validate(){
   else if (validatePhonenumber()) {
     return false;
   }
+  setJson();
 }
 
 function validateSurname(){

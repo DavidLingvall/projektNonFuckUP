@@ -73,7 +73,7 @@ body{
   top: 51px;
   position: absolute;
   margin-left: 5%;
-  
+
 
 }
 .content{
@@ -167,9 +167,6 @@ img {
   margin-right: 10%;
   height: auto;
 }
-
-/*HÄRIFRÅN BÖRJAR MIN INDIVIDUELLA KOD FÖR MIN SIDA
-
 /* Style inputs, select elements and textareas */
 input[type=text], select, textarea{
   width: 100%;
@@ -180,13 +177,11 @@ input[type=text], select, textarea{
   resize: vertical;
 }
 
-/* Style the label to display next to the inputs */
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
 }
 
-/* Style the submit button */
 input[type=submit] {
   background-color: #4CAF50;
   color: white;
@@ -196,36 +191,51 @@ input[type=submit] {
   cursor: pointer;
   float: right;
 }
+input[type=submit]:hover{
+  background-color: #3e8e41;
+  -o-transition:.3s;
+  -ms-transition:.3s;
+  -moz-transition:.3s;
+  -webkit-transition:.3s;
+  transition:.3s;
+}
+legend{
+  font-size: 2em;
+  font-family: monospace;
+  font-style: oblique;
+}
 
-/* Style the container */
-.container {
+.container{
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 100px;
-  width: 100%;
+  width: 80%;
+  margin: 10%;
+  margin-top: 2.5%;
+  border-radius: 1%;
+  float: left;
+  padding: 20px;
+  z-index: 2;
+  border: outset;
+  margin-bottom: 0;
 }
 
-/* Floating column for labels: 25% width */
 .kolumn1 {
   float: left;
   width: 25%;
   margin-top: 6px;
 }
 
-/* Floating column for inputs: 75% width */
 .kolumn2 {
   float: left;
   width: 75%;
   margin-top: 6px;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
-
-
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
@@ -272,7 +282,6 @@ text-align: center;
 h2{
   font-family: monospace;
   font-style: oblique;
-
 }
 
 .submit{
@@ -285,198 +294,20 @@ h2{
   text-align: center;
 }
 .vanligText{
-
   text-align: center;
 }
-
 #ani{
 text-align: center;
-
 }
-
 #ani2{
 padding: 80px;
 display: none;
 background-image: url(pic3.jpg);
 color: white;
 text-align: center;
-
-
 }
-
 #bildSpel{
   height: 400px;
   width: 800px;
   padding-top: 20px;
-
 }
-
-
-
-
-.con {
-  width: 50%;
-  background-color: #ddd;
-  color: #333;
-  box-sizing: border-box;
-  box-shadow: 0 20px 50px rgba(0,0,0,.5);
-  border-radius: 8px;
-
-
-}
-
-.box p{
-  font-family: sans-serif;
-
-
-}
-
-
-
-.skills{
-  text-align: right;
-  padding: 10px;
-  color: white;
-  font-family: sans-serif;
-  font-size: 15px;
-
-}
-
-
-
-.html {
-  width: 30%;
-  background-color: gold;
-  border-radius: 5px;
-  animation: html 2s;
-   }
-
-.css {
-  width: 20%;
-  background-color: red;
-  border-radius: 5px;
-  animation: css 2s;
-   }
-
-.jquery {
-  width: 10%;
-  background-color: darkblue;
-  border-radius: 5px;
-  animation: jquery 2s;
-}
-
-.netbeans{
-  width: 40%;
-  background-color: cyan;
-  border-radius: 5px;
-  animation: netbeans 2s;
- }
-
- .skills{
-   text-align: right;
-   padding: 10px;
-   color: white;
-   font-family: sans-serif;
-   font-size: 15px;
-
- }
-
- .svenska {
-   width: 100%;
-   background-color: gold;
-   border-radius: 5px;
-   animation: svenska 2s;
-    }
-
- .engelska {
-   width: 100%;
-   background-color: red;
-   border-radius: 5px;
-   animation: engelska 2s;
-    }
-
- .franska {
-   width: 30%;
-   background-color: darkblue;
-   border-radius: 5px;
-   animation: franska 2s;
- }
-
- .spanska{
-   width: 10%;
-   background-color: cyan;
-   border-radius: 5px;
-   animation: spanska 2s;
-  }
-
- @keyframes html {
-   0%
-    { width: 0%;
-   }
-   100%{
-     width: 30%;
-   }
- }
-
- @keyframes css {
-   0%
-    { width: 0%;
-   }
-   100%{
-     width: 20%;
-   }
- }
-
- @keyframes jquery {
-   0%
-    { width: 0%;
-   }
-   100%{
-     width: 10%;
-   }
- }
-
- @keyframes netbeans {
-   0%
-    { width: 0%;
-   }
-   100%{
-     width: 40%;
-   }
- }
-
- @keyframes svenska {
-   0%
-    { width: 0%;
-   }
-   100%{
-     width: 100%;
-   }
- }
-
- @keyframes engelska {
-   0%
-    { width: 0%;
-   }
-   100%{
-     width: 100%;
-   }
- }
-
- @keyframes franska {
-   0%
-    { width: 0%;
-   }
-   100%{
-     width: 30%;
-   }
- }
-
- @keyframes spanska {
-   0%
-    { width: 0%;
-   }
-   100%{
-     width: 10%;
-   }
- }
