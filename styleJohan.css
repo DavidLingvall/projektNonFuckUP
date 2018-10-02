@@ -10,6 +10,11 @@
   font-family: sans-serif;
 }
 
+body{
+
+  background-image: url(marmoria.jpeg);
+}
+
 
 
 .skills{
@@ -81,11 +86,17 @@
    animation: franska 2s;
  }
 
- .spanska{
-   width: 10%;
-   background-color: cyan;
-   border-radius: 5px;
-   animation: spanska 2s;
+ .intro{
+text-align: center;
+
+ }
+
+  #bildJohan{
+    width: 72%;
+    height: auto;
+    margin: auto;
+    border-radius: 4px;
+
   }
 
  @keyframes html {
@@ -148,14 +159,5 @@
    }
    100%{
      width: 30%;
-   }
- }
-
- @keyframes spanska {
-   0%
-    { width: 0%;
-   }
-   100%{
-     width: 10%;
    }
  }
