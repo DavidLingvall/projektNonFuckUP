@@ -126,6 +126,7 @@ height: auto;
   width: 80%;
   height: 80%;
   margin: 10%;
+  margin-top: 5%;
   border-collapse: collapse;
   font-family: monospace;
   font-stretch: condensed;
@@ -139,18 +140,11 @@ height: auto;
   position: relative;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-
-
 }
-
-
-
 .tableList tr{
   background-color: rgb(234, 234, 225);
   text-align: center;
   font-size: 17px;
-
-
 }
 .tableList a{
   text-decoration: none;
@@ -158,6 +152,25 @@ height: auto;
 }
 .tableTitle{
   border-bottom: solid;
+}
+.showMore{
+  font-size: 10px;
+  cursor: pointer;
+}
+#showMore1{
+  display: none;
+}
+#showMore2{
+  display: none;
+}
+#showMore3{
+  display: none;
+}
+#showMore4{
+  display: none;
+}
+#showMore5{
+  display: none;
 }
 iframe{
   width: 90%;
@@ -167,7 +180,6 @@ iframe{
 img {
     max-width: 100%;
     height: auto;
-
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -252,8 +264,7 @@ legend{
   display: table;
   clear: both;
 }
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+.
 @media screen and (max-width: 600px) {
   .kolumn1, .kolumn2, input[type=submit] {
     width: 100%;

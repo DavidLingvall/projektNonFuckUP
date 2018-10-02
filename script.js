@@ -40,9 +40,7 @@ function bildSpel(){
 function setList() {
   	var items = [],
   		object = {};
-
   	function listItems() {
-
       var i = 1;
   		items.forEach((item) => {
         if(i === 6){
@@ -50,11 +48,15 @@ function setList() {
         }
         var tableRow = $(
   				`<tr>
-  					<td><a href="${item.html_url}">${item.name}</a></td>
+  					<td><a href="${item.html_url}">${item.name}</a><br><button class="showMore" onclick="showMore(${i})">visa mer</button></td>
             <td><a href="${item.html_url}">${item.owner.login}</a></td>
   					<td>${item.watchers}</td>
-  				</tr>`
-
+  				</tr>
+          <tr id="showMore${i}">
+          <td>${item.contributors_url.id}</td>
+            <li></li>
+          </tr>
+          `
   			);
         i++;
   			$('#itemList').append(tableRow);
@@ -71,16 +73,21 @@ function setList() {
   						...item,
   					};
   				});
-  				listItems();
+  			//	listItems();
   			}
   		);
+      $.getJSON(
+        'item.'
+      );
   	}
   	loadJSON();
 
 };
-  $("#ani").click(function(){
-    $("#ani2").slideToggle();
-  });
+
+$("#ani").click(function(){
+  $("#ani2").slideToggle();
+});
+
 function validate(){
   if (validateSurname()) {
     return false;
@@ -188,14 +195,14 @@ function setJson(){
 function init(){
   if (localStorage.personRecord) {
     personArray = JSON.parse(localStorage.personRecord);
-  }i
-  var i = personArray.length - 1;
-  $("#fname").val(personArray[i].firstname);
-  $("#lname").val(personArray[i].lastname);
-  $("#epost").val(personArray[i].email);
-  $("#phone").val(personArray[i].phonenumber);
-  $("#post").val(personArray[i].post);
+    var i = personArray.length - 1;
+    $("#fname").val(personArray[i].firstname);
+    $("#lname").val(personArray[i].lastname);
+    $("#epost").val(personArray[i].email);
+    $("#phone").val(personArray[i].phonenumber);
+    $("#post").val(personArray[i].post);
+  }
 }
-
-$('#testknapp').click(function(){
-});
+function showMore(i){
+  $('#showMore' + i).slideToggle();
+}

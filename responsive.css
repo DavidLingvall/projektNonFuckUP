@@ -8,6 +8,16 @@
     border: outset;
     margin: 2.5%;
   }
+  #portfolio{
+  width: 60%;
+  height: auto;
+
+  }
+  #portfolio2{
+  width: 60%;
+  height: auto;
+
+  }
 }
 @media screen and (max-width : 500px) {
     .wrapper{
