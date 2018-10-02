@@ -111,6 +111,7 @@ height: auto;
   width: 80%;
   height: 80%;
   margin: 10%;
+  margin-top: 5%;
   border-collapse: collapse;
   font-family: monospace;
   font-stretch: condensed;
@@ -138,8 +139,23 @@ height: auto;
   border-bottom: solid;
 }
 .showMore{
-  font-size: 12px;
+  font-size: 10px;
   cursor: pointer;
+}
+#showMore1{
+  display: none;
+}
+#showMore2{
+  display: none;
+}
+#showMore3{
+  display: none;
+}
+#showMore4{
+  display: none;
+}
+#showMore5{
+  display: none;
 }
 iframe{
   width: 90%;

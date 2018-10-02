@@ -40,9 +40,7 @@ function bildSpel(){
 function setList() {
   	var items = [],
   		object = {};
-
   	function listItems() {
-
       var i = 1;
   		items.forEach((item) => {
         if(i === 6){
@@ -50,12 +48,15 @@ function setList() {
         }
         var tableRow = $(
   				`<tr>
-  					<td><a href="${item.html_url}">${item.name}</a></td>
+  					<td><a href="${item.html_url}">${item.name}</a><br><button class="showMore" onclick="showMore(${i})">visa mer</button></td>
             <td><a href="${item.html_url}">${item.owner.login}</a></td>
   					<td>${item.watchers}</td>
-            <td><button></button></td>
-  				</tr>`
-
+  				</tr>
+          <tr id="showMore${i}">
+          <td>${item.contributors_url.id}</td>
+            <li></li>
+          </tr>
+          `
   			);
         i++;
   			$('#itemList').append(tableRow);
@@ -72,9 +73,12 @@ function setList() {
   						...item,
   					};
   				});
-  				listItems();
+  			//	listItems();
   			}
   		);
+      $.getJSON(
+        'item.'
+      );
   	}
   	loadJSON();
 
@@ -199,17 +203,6 @@ function init(){
     $("#post").val(personArray[i].post);
   }
 }
-
-$('#showMore').click(function(){
-
-
-
-alert('jeeeens');
-
-
-
-
-
-
-
-});
+function showMore(i){
+  $('#showMore' + i).slideToggle();
+}
