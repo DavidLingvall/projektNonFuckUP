@@ -264,7 +264,7 @@ legend{
   display: table;
   clear: both;
 }
-.
+
 @media screen and (max-width: 600px) {
   .kolumn1, .kolumn2, input[type=submit] {
     width: 100%;
@@ -316,6 +316,15 @@ h2{
 
 }
 
+.hem{
+
+padding-top: 40px;
+  text-align: center;
+  font-family: monospace;
+}
+
+
+
 .submit{
 
   text-align: center;
@@ -339,7 +348,7 @@ color: white;
 text-align: center;
 }
 #bildSpel{
-  height: 400px;
-  width: 800px;
-  padding-top: 20px;
+  height: 500px;
+  width: 900px;
+  padding-top: 120px;
 }
