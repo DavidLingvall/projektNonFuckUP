@@ -1,4 +1,7 @@
 @media screen and (max-width : 1100px) {
+  .wrapper{
+    width: 90%;
+  }
   .content{
     float: left;
     width: 95%;
@@ -8,15 +11,22 @@
     border: outset;
     margin: 2.5%;
   }
+
   #portfolio{
-  width: 60%;
+  width: 80%;
   height: auto;
 
   }
   #portfolio2{
-  width: 60%;
+  width: 80%;
   height: auto;
-
+  }
+}
+@media screen and (max-width : 800px) {
+  .contentB{
+    width: 100%;
+    padding: 20px;
+    height: 500px;
   }
 }
 @media screen and (max-width : 500px) {
