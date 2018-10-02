@@ -190,13 +190,13 @@ function setJson(){
 function init(){
   if (localStorage.personRecord) {
     personArray = JSON.parse(localStorage.personRecord);
-  }i
-  var i = personArray.length - 1;
-  $("#fname").val(personArray[i].firstname);
-  $("#lname").val(personArray[i].lastname);
-  $("#epost").val(personArray[i].email);
-  $("#phone").val(personArray[i].phonenumber);
-  $("#post").val(personArray[i].post);
+    var i = personArray.length - 1;
+    $("#fname").val(personArray[i].firstname);
+    $("#lname").val(personArray[i].lastname);
+    $("#epost").val(personArray[i].email);
+    $("#phone").val(personArray[i].phonenumber);
+    $("#post").val(personArray[i].post);
+  }
 }
 
 $('#showMore').click(function(){
