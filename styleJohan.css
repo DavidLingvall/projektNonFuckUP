@@ -26,6 +26,11 @@ body{
 
 }
 
+.video{
+width: 40%;
+height: inherit;
+
+}
 
 
 .html {
