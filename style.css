@@ -264,7 +264,7 @@ legend{
   display: table;
   clear: both;
 }
-.
+
 @media screen and (max-width: 600px) {
   .kolumn1, .kolumn2, input[type=submit] {
     width: 100%;
