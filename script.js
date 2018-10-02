@@ -162,3 +162,40 @@ function validatePhonenumber(){
     }
     return false;
 }
+
+var personArray = [];
+
+function setJson(){
+    var fnameValue = document.getElementById('fname').value;
+    var lnameValue = document.getElementById('lname').value;
+    var emailValue = document.getElementById('epost').value;
+    var phoneValue = document.getElementById('phone').value;
+    var postValue = document.getElementById('post').value;
+
+    perObj = {
+                firstname:fnameValue,
+                lastname:lnameValue,
+                email:emailValue,
+                phonenumber:phoneValue,
+                post:postValue
+              };
+    personArray.push(perObj);
+
+    console.log(personArray);
+
+    localStorage.personRecord = JSON.stringify(personArray);
+}
+function init(){
+  if (localStorage.personRecord) {
+    personArray = JSON.parse(localStorage.personRecord);
+  }i
+  var i = personArray.length - 1;
+  $("#fname").val(personArray[i].firstname);
+  $("#lname").val(personArray[i].lastname);
+  $("#epost").val(personArray[i].email);
+  $("#phone").val(personArray[i].phonenumber);
+  $("#post").val(personArray[i].post);
+}
+
+$('#testknapp').click(function(){
+});

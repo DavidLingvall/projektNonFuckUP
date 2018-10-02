@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css" media="screen and (max-width: 900px)">
   </head>
-  <body onload="loadForm()">
+  <body onload="init()">
     <div class="header">
       <div class="dropdownMenu">
         <img src="mcdonalds.png" class="header-img" alt="logo">
@@ -21,10 +21,10 @@
     </div>
     <fieldset class="container">
       <legend>Vänligen fyll i dina uppgifter</legend>
-      <form name="form" action="" onSubmit="return validate()">
+      <form name="form" action="Submit.html" onSubmit="return validate()">
         <div class="row">
           <div class="kolumn1">
-            <label for="fname" id="fnameKey">Förnamn</label>
+            <label for="fname">Förnamn</label>
           </div>
           <div class="kolumn2">
             <input type="text" id="fname" name="firstname" placeholder="Förnamn..">
@@ -32,7 +32,7 @@
         </div>
         <div class="row">
           <div class="kolumn1">
-            <label for="lname" id="lnameKey">Efternamn</label>
+            <label for="lname">Efternamn</label>
           </div>
           <div class="kolumn2">
             <input type="text" id="lname" name="lastname" placeholder="Efternamn..">
@@ -40,7 +40,7 @@
         </div>
         <div class="row">
           <div class="kolumn1">
-            <label for="epost" id="emailKey">E-post</label>
+            <label for="epost">E-post</label>
           </div>
           <div class="kolumn2">
             <input type="text" id="epost" name="E-post" placeholder="E-post">
@@ -48,7 +48,7 @@
         </div>
         <div class="row">
           <div class="kolumn1">
-            <label for="telefon" id="phoneKey">Telefon</label>
+            <label for="phone">Telefon</label>
           </div>
           <div class="kolumn2">
             <input type="text" id="phone" name="phonenumber" placeholder="Telefonnummer">
@@ -56,7 +56,7 @@
         </div>
         <div class="row">
           <div class="kolumn1">
-            <label for="post" id="postKey">Inlägg</label>
+            <label for="post">Inlägg</label>
           </div>
           <div class="kolumn2">
             <textarea id="post" name="inlägg" placeholder="Skriv något.." style="height:200px"></textarea>
@@ -67,18 +67,6 @@
         </div>
       </form>
     </fieldset>
-    <div class="container">
-      <table class="tableList">
-        <tr>
-          <th>Förnamn</th>
-          <th>Efternamn</th>
-          <th>E-post</th>
-          <th>Telefonnummer</th>
-          <th>Inlägg</th>
-        </tr>
-      </table>
-    </div>
-
 
   <script src="https://code.jquery.com/jquery-latest.js"></script>
   <script src="script.js"></script>
