@@ -50,7 +50,7 @@ function setList() {
         }
         var tableRow = $(
   				`<tr>
-  					<td><a href="${item.html_url}">${item.name}</a></td>
+  					<td><a href="${item.html_url}">${item.name}</a><br><p class="showMore">Visa mer</p></td>
             <td><a href="${item.html_url}">${item.owner.login}</a></td>
   					<td>${item.watchers}</td>
   				</tr>`
@@ -78,9 +78,11 @@ function setList() {
   	loadJSON();
 
 };
-  $("#ani").click(function(){
-    $("#ani2").slideToggle();
-  });
+
+$("#ani").click(function(){
+  $("#ani2").slideToggle();
+});
+
 function validate(){
   if (validateSurname()) {
     return false;
@@ -197,5 +199,19 @@ function init(){
   $("#post").val(personArray[i].post);
 }
 
-$('#testknapp').click(function(){
+$('#showMore').click(function(){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
