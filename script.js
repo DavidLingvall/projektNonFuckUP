@@ -37,13 +37,15 @@ function bildSpel(){
   });
 }
 
-function setList() {
+function setLists(){
+  setListJs();
+  setListCss();
+}
+
+function setListJs() {
 
   	var items = [],
   		object = {};
-
-    var contributors = []
-      object = {};
 
   	function listItems() {
       var i = 1;
@@ -51,19 +53,6 @@ function setList() {
         if(i === 6){
           return;
         }
-        var contributor;
-        var contNamn;
-        var contAvatar;
-        fetch(item.contributors_url)
-                .then(response => response.json())
-                .then(data => {
-            for(var i = 0; i < 5; i++){
-
-            }
-            contributor = data[0];
-            contNamn = contributor.login;
-            contAvatar = contributor.avatar_url;
-        });
           var tableRow = $(
 
   				`<tr>
@@ -75,7 +64,7 @@ function setList() {
   			);
         i++;
 
-  			$('#itemList').append(tableRow);
+  			$('#itemListJs').append(tableRow);
 
   		});
   	}
@@ -95,7 +84,49 @@ function setList() {
   		);
   	}
   	loadJSON();
+};
+function setListCss() {
 
+  	var items = [],
+  		object = {};
+
+  	function listItems() {
+      var i = 1;
+  		items.forEach((item) => {
+        if(i === 6){
+          return;
+        }
+          var tableRow = $(
+
+  				`<tr>
+  					<td><a href="${item.html_url}">${item.name}</a></td>
+            <td><a href="${item.html_url}">${item.owner.login}</a></td>
+  					<td>${item.watchers}</td>
+  				</tr>
+          `
+  			);
+        i++;
+
+  			$('#itemListCSS').append(tableRow);
+
+  		});
+  	}
+
+  	function loadJSON() {
+  		$.getJSON(
+        'https://api.github.com/search/repositories?q=language:css&sort=watchers&order=desc',
+        (data) => {
+  				//console.log(data);
+  				items = data.items.map((item) => {
+  					return {
+  						...item,
+  					};
+  				});
+  				listItems();
+  			}
+  		);
+  	}
+  	loadJSON();
 };
 
 $("#ani").click(function(){
