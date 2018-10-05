@@ -155,8 +155,11 @@ function validate(){
     $('#povali').text("Fyll i något i rutan")
     ok = false;
   }
+  if(ok){
+    setJson();
+  }
   return ok;
-  setJson();
+
 }
 
 document.getElementById("fname").oninput = function() {
