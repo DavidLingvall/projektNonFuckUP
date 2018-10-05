@@ -118,7 +118,9 @@ width: 100%;
 height: auto;
 
 }
-
+.red{
+  color: red;
+}
 .content p {
   padding: 5px;
 }

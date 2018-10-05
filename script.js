@@ -134,85 +134,107 @@ $("#ani").click(function(){
 });
 
 function validate(){
-  if (validateSurname()) {
-    return false;
+  var ok = true
+  if(validateSurname()){
+    $('#fvali').text('Minst 3 bokstäver')
+    ok = false;
   }
-  else if (validateLastname()) {
-    return false;
+  if(validateLastname()){
+    $('#lvali').text('Minst 3 bokstäver')
+    ok = false;
   }
-  else if (validateEmail()) {
-    return false;
+  if(validateEmail()){
+    $('#evali').text('Ogiltigt format på mail')
+    ok = false;
   }
-  else if (validatePhonenumber()) {
-    return false;
+  if(validatePhonenumber()){
+    $('#phvali').text("Ogiltigt format på telefonnummer!")
+    ok = false;
   }
+  if(validatePost()){
+    $('#povali').text("Fyll i något i rutan")
+    ok = false;
+  }
+  return ok;
   setJson();
 }
+
+document.getElementById("fname").oninput = function() {
+  validateSurname();
+};
+document.getElementById("lname").oninput = function() {
+  validateLastname();
+};
+document.getElementById("epost").oninput = function() {
+  validateEmail();
+};
+document.getElementById("phone").oninput = function() {
+  validatePhonenumber();
+};
+document.getElementById("post").oninput = function() {
+  validatePost();
+};
+
 
 function validateSurname(){
   var surname = document.forms["form"]["firstname"].value;
   var minSur = surname.length;
-  if(surname == ""){
-    alert("Fyll i ditt förnamn!");
+  if (minSur < 3) {
+    $('#fvali').text('Minst 3 bokstäver')
     return true;
   }
-  else if (minSur < 3) {
-    alert("Fyll i minst 3 bokstäver i fältet förnamn!")
-    return true;
+  else if(minSur >= 3){
+    $('#fvali').text('')
   }
-  return false;
+
 }
 function validateLastname(){
   var lastname = document.forms["form"]["lastname"].value;
   var minLast=lastname.length;
-  if (lastname=="") {
-    alert("Fyll i ditt efternamn!");
+  if (minLast < 3) {
+    $('#lvali').text('Minst 3 bokstäver')
     return true;
   }
-  else if (minLast < 3) {
-    alert("Fyll i minst 3 bokstäver i fältet efternamn!")
-    return true;
+  else if(minLast >= 3){
+    $('#lvali').text('')
   }
-  return false;
 }
 function validateEmail(){
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var mailFalse = true;
     var email = document.forms["form"]["E-post"].value;
-    if (email == "") {
-      alert("Fyll i ditt E-post!");
-      return true;
-    }
-    else if (email.match(mailformat)){
-      mailFalse = true;
+    var mailFalse = true;
+    if (email.match(mailformat)){
+      mailFalse = false;
     }
     else if (mailFalse) {
-      alert("Ogiltigt format på mail!");
+      $('#evali').text('Ogiltigt format på mail')
       return true;
     }
-    return false;
+    if (mailFalse == false) {
+      $('#evali').text('')
+    }
 }
 function validatePhonenumber(){
-    var phoneFormat = /^[0-9+]+$/;
+    var phoneFormat = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
     var phoneFalse = true;
     var phonenumber = document.forms["form"]["phonenumber"].value;
     var minNumber = phonenumber.length;
-    if (phonenumber == "") {
-      alert("Fyll i ditt telefonnummer!");
-      return true;
-    }
-    else if (phonenumber.match(phoneFormat)) {
-      phoneFalse = true;
+    if (phonenumber.match(phoneFormat)) {
+      phoneFalse = false;
     }
     else if (phoneFalse){
-      alert("Ogiltigt format på telefonnummer!")
+      $('#phvali').text("Ogiltigt format på telefonnummer!")
       return true;
     }
-    if (minNumber < 4) {
-      alert("Fyll i minst 4 nummer i fältet telefon!")
+    if (phoneFalse == false) {
+      $('#phvali').text("")
+    }
+}
+function validatePost(){
+    var post = document.forms["form"]["messege"].value;
+    if (post == ""){
       return true;
     }
-    return false;
 }
 
 var personArray = [];
